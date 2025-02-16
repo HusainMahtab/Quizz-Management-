@@ -19,3 +19,19 @@ export const AppDataSource = new DataSource({
   subscribers: [], 
   ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
 });
+
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: 'postgresql://quiz_db_b5yp_user:gSIxJV9IX9Cj4pDP71Gkv6typvrF7SuJ@dpg-cuoosnhopnds738u3v90-a/quiz_db_b5yp',
+  ssl: {
+    rejectUnauthorized: false // Only needed for SSL connections
+  }
+});
+
+client.connect()
+  .then(() => console.log("Connected to PostgreSQL"))
+  .then(() => client.query('SELECT * FROM "user"'))
+  .then((res: { rows: any; }) => console.log(res.rows))
+  .catch((err: any) => console.error(err))
+  .finally(() => client.end());

@@ -7,8 +7,10 @@ const router = express.Router();
 // Create a quiz
 router.post('/', async (req, res) => {
   const { title, description, teacher_id } = req.body;
+  console.log("title",title,"description",description,"teacherid",teacher_id)
   try {
     const quizRepository = AppDataSource.getRepository(Quiz);
+    console.log("quiz",quizRepository)
     const quiz = quizRepository.create({ title, description, teacher: { id: teacher_id } });
     await quizRepository.save(quiz);
     res.status(201).json(quiz);
