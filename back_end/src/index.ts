@@ -15,7 +15,6 @@ const PORT = 5000;
 app.use(
   cors({
     origin:['http://localhost:5173','https://quizz-management-5dws.onrender.com'], 
-    credentials: true, // Allow cookies and credentials
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Ensure headers are allowed
   })

@@ -1,7 +1,7 @@
 import express from 'express';
 import { AppDataSource } from '../data-source';
 import { User } from '../models/User';
-import bcrypt from "bcryptjs"
+
 const router = express.Router();
 
 // create users
