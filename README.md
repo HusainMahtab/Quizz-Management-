@@ -39,7 +39,7 @@ https://quizz-management-5dws.onrender.com/
 
 #### 1. Create Quiz
 ```http
-POST /quiz
+POST api/quizzes
 ```
 **Request Body:**
 ```json
