@@ -12,16 +12,11 @@ Make sure you have the following installed:
 - react with vite
 
 ### Installation
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    npm install
    ```
-3. Set up environment variables:
+2. Set up environment variables:
    - Create a `.env` file in the root directory and add the required environment variables:
    ```env
    DATABASE_URL=postgresql://quiz_db_b5yp_user:gSIxJV9IX9Cj4pDP71Gkv6typvrF7SuJ@dpg-cuoosnhopnds738u3v90-a/quiz_db_b5yp
