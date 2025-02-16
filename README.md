@@ -6,7 +6,6 @@ A brief description of the project goes here.
 ## Project Setup
 
 ### Prerequisites
-Make sure you have the following installed:
 - Node.js (Latest LTS version recommended)
 - PostgreSQL Database
 - react with vite
@@ -124,10 +123,10 @@ DELETE api/quizzes/:id
 | id | Integer | Primary Key, Auto Increment |
 | title | String | Not Null |
 | description | String | Not Null |
-| categoryId | Integer | Foreign Key References Category Table |
+| teacher_Id | Integer | Foreign Key References auth Table |
 
 ## Troubleshooting
-- If you get a foreign key constraint error, ensure that the referenced `teacher_Id` exists in the `teacher` table before inserting a quiz.
+- If you get a foreign key constraint error, ensure that the referenced `teacher_Id` exists in the `auth` table before inserting a quiz.
 - Check the logs for any database connection issues.
 
 ## License
