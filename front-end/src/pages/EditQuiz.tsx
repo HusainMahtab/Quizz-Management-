@@ -14,7 +14,7 @@ const EditQuiz: React.FC = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/quizzes/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/quizzes/${id}`);
         setTitle(response.data.title);
         setDescription(response.data.description);
       } catch (error) {
@@ -30,7 +30,7 @@ const EditQuiz: React.FC = () => {
       return
     }
     try {
-      await axios.put(`http://localhost:5000/api/quizzes/${id}`, {
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/quizzes/${id}`, {
         title,
         description,
       });

@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/quizzes');
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/quizzes`);
         setQuizzes(response.data);
       } catch (error) {
         console.error('Failed to fetch quizzes:', error);
@@ -22,7 +22,7 @@ const Dashboard: React.FC = () => {
 
   const handleDelete=async(quizId:number)=>{
     try {
-        const response=await axios.delete(`http://localhost:5000/api/quizzes/${quizId}`)
+        const response=await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/quizzes/${quizId}`)
         toast.success(response.data?.message || "Quizz deleted successfully")
         setQuizzes(quizzes.filter((quzz:any)=>quzz.id!==quizId))
     } catch (error) {   

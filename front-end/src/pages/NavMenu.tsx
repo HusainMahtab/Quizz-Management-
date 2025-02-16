@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function NavMenu() {
   return (
-    <div className="w-full p-4 bg-white shadow shadow-lg flex justify-between">
+    <div className="w-full p-4 bg-white shadow-lg flex justify-between">
         <div>
             <Link to={"/dashboard"} className="text-xl font-bold p-4">Dashboard</Link>
         </div>

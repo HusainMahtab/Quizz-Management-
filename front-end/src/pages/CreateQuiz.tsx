@@ -16,7 +16,7 @@ const CreateQuiz: React.FC = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/api/quizzes', {
+      await axios.post(`${import.meta.env.VITE_BASE_URL}/api/quizzes`, {
         title,
         description,
         teacher_id: 1, // Static teacher ID for demo
